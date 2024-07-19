@@ -17,3 +17,13 @@
 
 The repository is structured with separate commits for each exercise in the Eloquent - Being relatable module. This allows you to review each stage of the module independently, making it easier to provide targeted feedback.
 Please refer to the specific commits to see the progress and implementation details for each of the four exercises.
+
+### 1.Forms and CSRF → 1.Setting up the Library app
+
+- Created new project
+- Created Book-model
+- Created migration Columns: `id, title, author, read_at,` + `timestamps() & softDeletes()`
+- Created resource route & controller: **BookController**
+- Created a basic layout component `layouts/app.blade.php`
+- Created a view `books/add.blade.php` that uses it
+- Bookcontrolller::create return: `add.blade.php` 
