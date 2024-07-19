@@ -68,4 +68,17 @@ class BooksController extends Controller
     {
         //
     }
+
+    /**
+     * Mark a book as read or remove that mark.
+     */
+    public function toggleRead(Request $request)
+    {
+        $book = Book::findOrFail($request->input('id'));
+
+        $book->read_at = $request->boolean('isRead') ? date('Y-m-d') : null;
+        $book->save();
+
+        return ['success' => "$book->title has been updated."];
+    }    
 }

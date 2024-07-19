@@ -15,6 +15,8 @@
         <!-- Scripts -->
         <script src="https://cdn.tailwindcss.com"></script>
 
+        <!-- Vite -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     </head>
     <body class="font-sans antialiased bg-stone-100">
@@ -30,5 +32,8 @@
                 </section>
             </main>
         </div>
+
+        @stack('scripts')
+
     </body>
 </html>

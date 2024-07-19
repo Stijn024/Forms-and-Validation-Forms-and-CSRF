@@ -34,3 +34,15 @@ Please refer to the specific commits to see the progress and implementation deta
 - Created a view `books/index.blade.php` that shows all books via `BooksController::index`
 - Submit stores the records via `BooksController::store` and redirects to index
 - Added `$fillable` in Book-model
+
+### 1. Forms and CSRF → 3.Marking books as read
+
+- Added a checkbox for each book in the listing. If the book has been read, the checkbox is checked via: `Book->isRead()` *
+- Added a PUT route `books/toggle-read` in `web.php` (before the resource route) with controller action for marking a book as read
+- Added `@stack('scripts')` to `components/layouts/app.blade.php`
+- Added attached javascript script to the `index.blade.php` via `@push('scripts)`. It uses the fetch api to send a PUT request to toggle read/unread
+- Tested the three solutions: kept the AXIOS solution
+- 
+
+*Note that using the Book->isRead() method to check if a book has been read is optional. 
+It is just one of the possible solutions, and students may implement this functionality in different ways.*

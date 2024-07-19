@@ -15,4 +15,10 @@ class Book extends Model
         'author',
         'read_at',
     ];     
+
+    public function isRead()
+    {
+        return ($this->read_at !== null) ? true : false;
+    }     
+
 }
