@@ -27,3 +27,10 @@ Please refer to the specific commits to see the progress and implementation deta
 - Created a basic layout component `layouts/app.blade.php`
 - Created a view `books/add.blade.php` that uses it
 - Bookcontrolller::create return: `add.blade.php` 
+
+### 1.Forms and CSRF → 2.CSRF
+
+- Created a form `add.blade.php` with CSRF-protection and **title** & **author** inputs
+- Created a view `books/index.blade.php` that shows all books via `BooksController::index`
+- Submit stores the records via `BooksController::store` and redirects to index
+- Added `$fillable` in Book-model

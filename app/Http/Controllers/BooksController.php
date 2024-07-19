@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
@@ -11,7 +12,9 @@ class BooksController extends Controller
      */
     public function index()
     {
-        //
+        return view('books.index', [
+            'books' => Book::all(),
+        ]);
     }
 
     /**
@@ -27,7 +30,11 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->only(['title', 'author']);
+
+        Book::create($input);
+
+        return redirect()->route('books.index');
     }
 
     /**
