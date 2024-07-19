@@ -42,7 +42,7 @@ Please refer to the specific commits to see the progress and implementation deta
 - Added `@stack('scripts')` to `components/layouts/app.blade.php`
 - Added attached javascript script to the `index.blade.php` via `@push('scripts)`. It uses the fetch api to send a PUT request to toggle read/unread
 - Tested the three solutions: kept the AXIOS solution
-- 
+- Added `@vite` include to `components/layouts/app.blade.php` + `npm install & npm run dev`
 
 *Note that using the Book->isRead() method to check if a book has been read is optional. 
 It is just one of the possible solutions, and students may implement this functionality in different ways.*
